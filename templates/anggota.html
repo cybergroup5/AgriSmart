@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Halaman Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            background-color: #978775;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar a,
+        .logo {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        .menu-icon {
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: #978775;
+            margin-top: 80px;
+        }
+        
+        .masuk-button {
+            margin-top: 25px;
+            background-color: #FFFFFF;
+            color: black;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: none;
+            border-radius: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+            margin-right: 80%;
+        }
+        
+        .menu a {
+            font-size: 16px;
+        }
+        
+        .member-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .member {
+            text-align: center;
+            margin: 50px;
+        }
+        
+        .member img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .member-info {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="../static/images/orbit_1.png"> Agrismart
+        </div>
+        <div class="menu">
+            <a href="{{ url_for('homebase') }}">Halaman Utama</a>
+            <a href="{{ url_for('informasi') }}">Informasi</a>
+            <a href="{{ url_for('aplikasi') }}">Aplikasi</a>
+            <a href="{{ url_for('anggotakel') }}">Anggota Kelompok</a>
+            <a class="menu-icon">&#9776;</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Anggota Kelompok</h1>
+        <div class="member-container">
+            <div class="member">
+                <img src="../static/images/zahra_1.png" alt="Member 1">
+                <div class="member-info">
+                    <b>Raudya Tuzahra Ana Bani</b>
+                    <p>STT Terpadu Nurul Fikri</p>
+                </div>
+            </div>
+            <div class="member">
+                <img src="../static/images/michelle_1.png" alt="Member 2">
+                <div class="member-info">
+                    <b>Michelle Farhanaaz</b>
+                    <p>Universitas Pancasila</p>
+                </div>
+            </div>
+            <div class="member">
+                <img src="../static/images/fadilla_1.png" alt="Member 3">
+                <div class="member-info">
+                    <b>Fadillah Triyadi</b>
+                    <p>Universitas Pancasila</p>
+                </div>
+            </div>
+        </div>
+        <div class="member-container">
+            <div class="member">
+                <img src="../static/images/dedi_1.png" alt="Member 4">
+                <div class="member-info">
+                    <b>Dhafa Raihan Fadhil</b>
+                    <p>Universitas Singaperbangsa Karawang</p>
+                </div>
+            </div>
+            <div class="member">
+                <img src="../static/images/daffa_1.png" alt="Member 5">
+                <div class="member-info">
+                    <b>Dedi Misael Nababan</b>
+                    <p>STMIK Jakarta STI&K</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

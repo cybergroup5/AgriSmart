@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Aplikasi AgriSmart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            background-color: #978775;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar a,
+        .logo {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        .menu-icon {
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: #978775;
+            margin-top: 100px;
+        }
+        
+        .description {
+            text-align: justify;
+            max-width: 1000px;
+            margin: 0 auto 30px;
+            padding: 0 20px;
+            margin-top: 40px;
+        }
+        
+        .photos {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin-top: 50px;
+        }
+        
+        .photo {
+            text-align: center;
+            margin: 0 35px;
+        }
+        
+        .photo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        
+        .button {
+            background-color: white;
+            color: #978775;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="background-color: #E8DFD5;">
+    <div class="navbar">
+        <div class="logo">
+            <img src="../static/images/orbit_1.png"> Agrismart
+        </div>
+        <div class="menu">
+            <a href="{{ url_for('homebase') }}" >Halaman Utama</a>
+            <a href="{{ url_for('informasi') }}">Informasi</a>
+            <a href="{{ url_for('aplikasi') }}">Aplikasi</a>
+            <a href="{{ url_for('anggotakel') }}">Anggota Kelompok</a>
+            <a class="menu-icon">&#9776;</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Selamat Datang Di Aplikasi AgriSmart</h1>
+        <p class="description">
+            Aplikasi ini dibuat untuk memprediksi hasil panen padi di Pulau Sumatera. Aplikasi prediksi hasil panen padi di Pulau Sumatera adalah sebuah platform berbasis website yang dirancang untuk membantu petani, peneliti, dan pemangku kepentingan di sektor pertanian.
+            Aplikasi ini mengintegrasikan data pengukuran dari berbagai sumber, termasuk Provinsi, Tahun, Produksi, Luas Tanah, Curah Hujan, Kelembaban, dan Suhu Rata-rata. Dengan memanfaatkan teknologi analisis data canggih, aplikasi ini memberikan prediksi
+            akurat mengenai hasil panen padi di berbagai wilayah di Pulau Sumatera.
+        </p>
+        <div class="photos">
+            <div class="photo">
+                <img src="../static/images/human-efforts-92262_1280_1.png" alt="Foto 1">
+                <a href="{{ url_for('informasipenanaman') }}" class="button">Informasi Penanaman</a>
+            </div>
+            <div class="photo">
+                <img src="../static/images/bibit_1.png" alt="Foto 2">
+                <a href="{{ url_for('informasibibit') }}" class="button">Informasi Bibit Unggul</a>
+            </div>
+            <div class="photo">
+                <img src="../static/images/suhu_1.png" alt="Foto 3">
+                <a href="{{ url_for('informasidata') }}" class="button">Informasi Data Padi</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

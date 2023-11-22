@@ -1,0 +1,173 @@
+<!-- Halaman Artikel (informasi-penanaman.html) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Penanaman - AgriSmart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-image: url('../static/images/istockphoto-621730722-612x612_1.png');
+            height: 100vh;
+            background-size: 100% auto;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        
+        .navbar {
+            background-color: #978775;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar a,
+        .logo {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        .menu-icon {
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: justify;
+    font-size: 1rem;
+    max-width: 800px; /* Atur lebar maksimum sesuai preferensi Anda */
+    margin: 0 auto; /* Untuk membuat .container berada di tengah secara horizontal */
+    padding: 20px; /* Padding opsional untuk memberi ruang di sekitar konten */
+}
+
+.container p {
+    text-align: justify;
+    font-size: 1rem; /* Menggunakan ukuran teks dalam satuan rem */
+}
+        
+        .masuk-button {
+            margin-top: 25%;
+            background-color: #FFFFFF;
+            color: black;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: none;
+            border-radius: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+            margin-right: 80%;
+        }
+        
+        .menu a {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+
+<body>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/orbit_1.png"> Agrismart
+            </div>
+            <div class="menu">
+                <a href="{{ url_for('homebase') }}" >Halaman Utama</a>
+                <a href="{{ url_for('informasi') }}">Informasi</a>
+                <a href="{{ url_for('aplikasi') }}">Aplikasi</a>
+                <a href="{{ url_for('anggotakel') }}">Anggota Kelompok</a>
+                <a class="menu-icon">&#9776;</a>
+            </div>
+        </div>
+
+
+    <!-- Konten Informasi Penanaman Padi -->
+    <div class="container p">
+        <h1>Menanam Padi yang Baik dan Efektif: Panduan Langkah demi Langkah </h1>
+
+         <!-- Isi Artikel -->
+         <p>Padi adalah tanaman pangan pokok yang sangat penting di seluruh dunia, yang memberikan makanan bagi jutaan orang. Menanam padi yang baik dan efektif adalah kunci untuk mendapatkan hasil panen yang maksimal. Dalam artikel ini, kami akan membahas langkah-langkah penting untuk menanam padi dengan sukses.</p>
+
+         <!-- Langkah-langkah penanaman padi -->
+         <ol>
+             <li>Pemilihan Varietas Padi yang Tepat</li>
+             <li>Persiapan Lahan yang Baik</li>
+             <li>Penanaman Benih dengan Benar</li>
+             <li>Pengelolaan Air yang Tepat</li>
+             <li>Pemeliharaan Tanaman yang Baik</li>
+             <li>Pemupukan Lanjutan</li>
+             <li>Pemanenan dan Pengeringan</li>
+             <li>Penyimpanan dan Pengelolaan Hasil Panen</li>
+             <!-- Tambahkan langkah-langkah lain di sini sesuai kebutuhan -->
+         </ol>
+ 
+         <!-- Paragraf kesimpulan -->
+         <p>Kesimpulan: Pertanian Padi yang Sukses Memerlukan Perhatian pada Detail. Menanam padi yang baik dan efektif memerlukan perhatian pada detail dan pemahaman mendalam tentang kebutuhan tanaman padi. Dengan mengikuti panduan langkah demi langkah ini, petani dapat meningkatkan produktivitas dan hasil panen padi mereka, yang pada gilirannya akan membantu mendukung keamanan pangan dan kesejahteraan masyarakat setempat. Pertanian padi yang sukses adalah kontribusi penting dalam usaha global untuk memenuhi kebutuhan pangan dunia.</p>
+     </div>
+ 
+     <!-- Sertakan Navbar menggunakan JavaScript (sudah benar) -->
+     <script>
+         fetch('navbar.html')
+             .then(response => response.text())
+             .then(data => {
+                 document.body.insertAdjacentHTML('afterbegin', data);
+             });
+     </script>
+ </body>
+ 
+ </html>
+ Code di atas mencakup struktur dasar yang telah Anda berikan sebelumnya, namun dengan beberapa perubahan untuk mengatasi masalah seperti penempatan elemen <body>, menghilangkan tag <title> ganda, dan menyertakan elemen-elemen standar seperti <html>, <head>, dan <body>. Namun, pastikan bahwa path ke gambar ('orbit 1.png') dan file eksternal ('navbar.html') adalah benar agar halaman dapat diakses dan ditampilkan dengan baik.
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+<!-- Include Navbar menggunakan JavaScript -->
+<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('afterbegin', data);
+        });
+</script>
+
+</body>
+
+</html>

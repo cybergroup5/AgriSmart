@@ -1,0 +1,155 @@
+<!-- Halaman Artikel (informasi-bibit.html) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Bibit Unggul - AgriSmart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-image: url('../static/images/istockphoto-621730722-612x612_1.png');
+            height: 100vh;
+            background-size: 100% auto;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        
+        .navbar {
+            background-color: #978775;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar a,
+        .logo {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        .menu-icon {
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: justify;
+    font-size: 1rem;
+    max-width: 800px; /* Atur lebar maksimum sesuai preferensi Anda */
+    margin: 0 auto; /* Untuk membuat .container berada di tengah secara horizontal */
+    padding: 20px; /* Padding opsional untuk memberi ruang di sekitar konten */
+}
+
+.container p {
+    text-align: justify;
+    font-size: 1rem; /* Menggunakan ukuran teks dalam satuan rem */
+}
+        
+        .masuk-button {
+            margin-top: 25%;
+            background-color: #FFFFFF;
+            color: black;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: none;
+            border-radius: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+            margin-right: 80%;
+        }
+        
+        .menu a {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+
+<body>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/orbit_1.png"> Agrismart
+            </div>
+            <div class="menu">
+                <a href="{{ url_for('homebase') }}" >Halaman Utama</a>
+                <a href="{{ url_for('informasi') }}">Informasi</a>
+                <a href="{{ url_for('aplikasi') }}">Aplikasi</a>
+                <a href="{{ url_for('anggotakel') }}">Anggota Kelompok</a>
+                <a class="menu-icon">&#9776;</a>
+            </div>
+        </div>
+
+
+  <!-- Konten Informasi Bibit Unggul -->
+<div class="container">
+    <h1>Karakteristik Dan Jenis Bibit Yang Unggul</h1>
+
+    <!-- Isi Artikel -->
+    <p>Bibit padi unggul adalah jenis-jenis bibit padi yang telah melalui seleksi dan pengembangan genetik untuk menghasilkan sifat-sifat unggul. Bibit-bibit ini memiliki karakteristik tertentu yang membuatnya lebih produktif, tahan terhadap hama dan penyakit, serta mampu bertahan dalam berbagai kondisi lingkungan. Berikut adalah beberapa karakteristik bibit padi unggul:</p>
+
+    <!-- Karakteristik Bibit Unggul -->
+    <ul>
+        <li>Produktivitas Tinggi: Bibit padi unggul memiliki potensi hasil panen yang lebih tinggi dibandingkan dengan varietas padi biasa. Mereka telah dirancang untuk menghasilkan jumlah gabah yang optimal per hektar.</li>
+        <li>Ketahanan Terhadap Hama dan Penyakit: Varietas unggul umumnya memiliki ketahanan terhadap serangan hama seperti kutu, wereng, dan penyakit seperti blast atau hawar daun, yang dapat merusak hasil panen.</li>
+        <li>Ketahanan Terhadap Kekeringan atau Banjir: Beberapa bibit padi unggul telah dikembangkan untuk memiliki ketahanan terhadap kondisi kekeringan atau banjir. Mereka memiliki akar yang kuat atau sifat tahan air yang membuatnya dapat bertahan dalam kondisi lingkungan yang sulit.</li>
+        <li>Waktu Tanam yang Fleksibel: Bibit padi unggul sering kali memiliki masa tanam yang lebih pendek, memungkinkan petani untuk memanen lebih awal dan mempercepat siklus tanam-panen.</li>
+        <li>Kualitas Butir yang Baik: Selain kuantitas, bibit padi unggul juga dapat memiliki kualitas butir yang baik, seperti ukuran butir yang seragam, warna gabah yang bersih, dan keberlimpahan pati yang menghasilkan beras berkualitas tinggi.</li>
+        <li>Adaptasi Lingkungan yang Baik: Bibit padi unggul dapat tumbuh dengan baik di berbagai jenis tanah dan kondisi iklim. Mereka dapat diadaptasi dengan baik di berbagai wilayah geografis.</li>
+    </ul>
+
+    <p>Penting untuk mencatat bahwa penggunaan bibit padi unggul ini membantu meningkatkan produktivitas pertanian padi dan kontribusi terhadap ketahanan pangan global. Program penelitian dan pengembangan terus berlangsung untuk menciptakan varietas-varietas padi unggul yang lebih baik yang dapat memenuhi tuntutan pertanian modern dan menghadapi tantangan perubahan iklim.</p>
+</div>
+
+    
+    
+         <!-- Sertakan Navbar menggunakan JavaScript (sudah benar) -->
+    <script>
+        document.getElementById('informasi-bibit-link').addEventListener('click', function(event) {
+            // Mengganti konten pada elemen <p> dengan informasi bibit unggul
+            document.getElementById('informasi-bibit-content').textContent = "Informasi bibit unggul adalah...";
+            
+            // Mengganti tautan URL sehingga pengguna dapat langsung mengakses informasi tersebut
+            // window.location.href = 'informasi-bibit.html';
+            
+            // Untuk mencegah tautan default (href="#") agar tidak mereload halaman
+            event.preventDefault();
+        });
+    </script>
+    
+</body>
+
+</html>
